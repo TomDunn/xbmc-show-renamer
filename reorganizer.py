@@ -39,14 +39,14 @@ parser.add_argument('--title',
 parser.add_argument('--season_regex',
         action='store',
         dest='season_regex',
-        default='^[0-9]?[0-9](?=\.)',
+        default='(?<=S)[0-9][0-9](?=E)',
         help="Regex used for extracting season number from filenames",
         type=str)
 
 parser.add_argument('--episode_regex',
         action='store',
         dest='episode_regex',
-        default='(?<=\.)[0-9]?[0-9]',
+        default='(?<=S[0-9][0-9]E)[0-9][0-9]',
         help="Regex used for extracting episode number from filenames",
         type=str)
 
